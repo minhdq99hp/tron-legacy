@@ -29,27 +29,27 @@ public class KeyboardListener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         switch (e.getKeyCode()) {
-            case Settings.KEY_UP: {
+            case KeyEvent.VK_UP: {
                 upPress = true;
                 break;
             }
-            case Settings.KEY_DOWN: {
+            case KeyEvent.VK_DOWN: {
                 downPress = true;
                 break;
             }
-            case Settings.KEY_LEFT: {
+            case KeyEvent.VK_LEFT: {
                 leftPress = true;
                 break;
             }
-            case Settings.KEY_RIGHT: {
+            case KeyEvent.VK_RIGHT: {
                 rightPress = true;
                 break;
             }
-            case Settings.KEY_SHOOT: {
+            case KeyEvent.VK_SLASH: {
                 shootPress = true;
                 break;
             }
-            case Settings.KEY_JUMP: {
+            case KeyEvent.VK_SPACE: {
                 jumpPress = true;
                 break;
             }
@@ -59,27 +59,27 @@ public class KeyboardListener implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
         switch (e.getKeyCode()) {
-            case Settings.KEY_UP: {
+            case KeyEvent.VK_UP: {
                 upPress = false;
                 break;
             }
-            case Settings.KEY_DOWN: {
+            case KeyEvent.VK_DOWN: {
                 downPress = false;
                 break;
             }
-            case Settings.KEY_LEFT: {
+            case KeyEvent.VK_LEFT: {
                 leftPress = false;
                 break;
             }
-            case Settings.KEY_RIGHT: {
+            case KeyEvent.VK_RIGHT: {
                 rightPress = false;
                 break;
             }
-            case Settings.KEY_SHOOT: {
+            case KeyEvent.VK_SLASH: {
                 shootPress = false;
                 break;
             }
-            case Settings.KEY_JUMP: {
+            case KeyEvent.VK_SPACE: {
                 jumpPress = false;
                 break;
             }

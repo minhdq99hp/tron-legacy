@@ -3,7 +3,7 @@ package com.linhnt.speedshoot.player;
 import com.linhnt.speedshoot.bases.GameObject;
 
 public class Player extends GameObject {
-    Player(){
+    public Player(){
 
     }
 

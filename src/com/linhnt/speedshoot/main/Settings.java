@@ -11,9 +11,9 @@ public class Settings {
     public static int GAME_WIDTH = 1280;
     public static int GAME_HEIGHT = 720;
 
-    public static final int KEY_SPEED_UP = KeyEvent.VK_W;
     public static final int KEY_LEFT = KeyEvent.VK_A;
     public static final int KEY_RIGHT = KeyEvent.VK_D;
+    public static final int KEY_SPEED_UP = KeyEvent.VK_W;
 
     public static final int KEY_LEFT_2 = KeyEvent.VK_LEFT;
     public static final int KEY_RIGHT_2 = KeyEvent.VK_RIGHT;

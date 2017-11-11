@@ -189,8 +189,23 @@ public class Vector2D {
         return this.multiplyThis(length / this.getLength());
     }
 
+    public void rotateThis(float angleRadian){
+        angleRadian += Math.atan(y/x);
+        float length = this.getLength();
+        this.set(length * (float)Math.cos(angleRadian), length * (float)Math.sin(angleRadian));
+    }
+
+    public Vector2D rotate(float angleRadian){
+        Vector2D vector2D = this.clone();
+        vector2D.rotateThis(angleRadian);
+
+        return vector2D;
+    }
+
     public static void main(String[] args) {
         Vector2D x1 = new Vector2D(2, 2);
         System.out.println(x1.setLength((float)Math.sqrt(2)));
     }
+
+
 }
