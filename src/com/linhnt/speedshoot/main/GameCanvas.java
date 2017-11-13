@@ -1,20 +1,17 @@
 package com.linhnt.speedshoot.main;
 
 import com.linhnt.speedshoot.background.Background;
-import com.linhnt.speedshoot.bases.Vector2D;
 import com.linhnt.speedshoot.bases.animation.SingleImageRenderer;
-import com.linhnt.speedshoot.bases.group.Group;
-import com.linhnt.speedshoot.bases.listeners.GameMouseListener;
 import com.linhnt.speedshoot.bases.pool.GameObjectPool;
-import com.linhnt.speedshoot.player.BullEyes;
-import com.linhnt.speedshoot.player.Player;
+import com.linhnt.speedshoot.bonus.Bonus;
+import com.linhnt.speedshoot.bonus.BonusManager;
+import com.linhnt.speedshoot.input.KeyboardListener;
+import com.linhnt.speedshoot.player.Player1;
+import com.linhnt.speedshoot.player.Player2;
 import com.linhnt.speedshoot.utils.ImageUtils;
-import com.linhnt.speedshoot.vehicule.VehiculeManager;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 /**
  * Created by minhdq99hp on 11/11/2017.
@@ -24,6 +21,7 @@ public class GameCanvas extends JPanel{
     private Graphics2D backBufferGraphics2D;
     private BufferedImage cache;
     private Graphics2D cacheGraphics2D;
+    private KeyboardListener keyboardListener;
 
 //    private Vector2D mouseClickPoint;
 
@@ -36,50 +34,42 @@ public class GameCanvas extends JPanel{
 //        }
 //    };
 
-    public GameCanvas()throws Exception{
+    GameCanvas()throws Exception{
         setupWindow();
 
         setupBackground();
 
         setupPlayer();
 
-//        setupGameObject();
-//        setupListener();
+        setupBonusManager();
+    }
+
+    private void setupBonusManager() throws Exception {
+        GameObjectPool.createAndAdd(BonusManager.class);
+
+        Bonus bonus = GameObjectPool.createAndAdd(Bonus.class);
+        bonus.getPosition().set(100, 100);
     }
 
     private void setupBackground() throws Exception {
-        //add anh landscape vao game
-//        Group backgroundGroup = GameObjectPool.createAndAdd(Group.class);
-//        Background background = GameObjectPool.create(Background.class);
-//        backgroundGroup.addChild(background);
-//        //TODO: có thể add thêm nhà cửa cây cối vào backgroundGroup
-
         GameObjectPool.createAndAdd(Background.class);
     }
 
     private void setupPlayer() throws Exception {
-//        bullEyes = new BullEyes();
-//        GameObjectPool.add(bullEyes);
-        Player player_1 = GameObjectPool.createAndAddAnddAddToPhysics(Player.class);
+        Player1 player_1 = GameObjectPool.createAndAddAnddAddToPhysics(Player1.class);
+        player_1.setupKeyListener(this.keyboardListener);
         player_1.setRenderer(new SingleImageRenderer(ImageUtils.read("assets/images/player1.png")));
         player_1.getPosition().set(Settings.GAME_WIDTH / 2, 100);
 
-        Player player_2 = GameObjectPool.createAndAddAnddAddToPhysics(Player.class);
+        Player2 player_2 = GameObjectPool.createAndAddAnddAddToPhysics(Player2.class);
+        player_2.setupKeyListener(this.keyboardListener);
         player_2.setRenderer(new SingleImageRenderer(ImageUtils.read("assets/images/player2.png")));
         player_2.getPosition().set(Settings.GAME_WIDTH / 2, 500);
     }
 
-//    private void setupGameObject() throws Exception {
-//        GameObjectPool.createAndAdd(VehiculeManager.class);
-//    }
-
-//    private void setupListener() {
-//        mouseClickPoint = new Vector2D();
-//
-//        this.addMouseListener(GameMouseListener.instance);
-//        this.addMouseMotionListener(GameMouseListener.instance);
-//        GameMouseListener.registerToInstance(this.mouseAdapter);
-//    }
+    void setupKeyListener(KeyboardListener e) {
+        this.keyboardListener = e;
+    }
 
     private void setupWindow() {
         //window

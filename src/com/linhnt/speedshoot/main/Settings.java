@@ -11,13 +11,21 @@ public class Settings {
     public static int GAME_WIDTH = 1280;
     public static int GAME_HEIGHT = 720;
 
-    public static final int KEY_LEFT = KeyEvent.VK_A;
-    public static final int KEY_RIGHT = KeyEvent.VK_D;
-    public static final int KEY_SPEED_UP = KeyEvent.VK_W;
+    public static final int KEY_LEFT = KeyEvent.VK_LEFT;
+    public static final int KEY_RIGHT = KeyEvent.VK_RIGHT;
+    public static final int KEY_SPEED_UP = KeyEvent.VK_UP;
 
-    public static final int KEY_LEFT_2 = KeyEvent.VK_LEFT;
-    public static final int KEY_RIGHT_2 = KeyEvent.VK_RIGHT;
-    public static final int KEY_SPEED_UP_2 = KeyEvent.VK_UP;
+    public static final int KEY_LEFT_2 = KeyEvent.VK_A;
+    public static final int KEY_RIGHT_2 = KeyEvent.VK_D;
+    public static final int KEY_SPEED_UP_2 = KeyEvent.VK_W;
+
+    // player
+    public static final int INIT_BLOOD = 100;
+    public static final int INIT_POINT = 0;
+    public static final float NORMAL_SPEED = 3;
+    public static final float TURBO_SPEED = 6;
+    public static final float DELTA_ANGLE = (float)Math.PI / 12;
+
 
     public static Color FONT_COLOR = new Color(0x990099);
     public static int FONT_COLOR_RGB = FONT_COLOR.getRGB();

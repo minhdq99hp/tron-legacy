@@ -11,12 +11,11 @@ public class Background extends GameObject {
         try {
             this.setRenderer(
                     new SingleImageRenderer(
-                            ImageUtils.read("assets/images/background.png")));
+                            ImageUtils.read("assets/images/map.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         this.getAnchor().set(0, 0);
-        this.getScale().set(2/3f, 2/3f);
     }
 }

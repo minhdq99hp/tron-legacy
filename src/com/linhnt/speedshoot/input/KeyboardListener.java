@@ -1,8 +1,14 @@
-package com.linhnt.speedshoot.main;
+package com.linhnt.speedshoot.input;
+
+
+import com.linhnt.speedshoot.main.Settings;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * Created by minhdq99hp on 12/11/2017.
+ */
 public class KeyboardListener implements KeyListener {
     private boolean leftPress;
     private boolean rightPress;
@@ -11,9 +17,9 @@ public class KeyboardListener implements KeyListener {
     private boolean rightPress2;
     private boolean speedUpPress2;
 
-    public static final com.linhnt.speedshoot.main.KeyboardListener instance = new com.linhnt.speedshoot.main.KeyboardListener();
+    public static final KeyboardListener instance = new KeyboardListener();
 
-    KeyboardListener() {
+    public KeyboardListener() {
     }
 
     @Override
@@ -23,6 +29,10 @@ public class KeyboardListener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         switch (e.getKeyCode()) {
+            case Settings.KEY_SPEED_UP: {
+                speedUpPress = true;
+                break;
+            }
             case Settings.KEY_LEFT: {
                 leftPress = true;
                 break;
@@ -31,8 +41,8 @@ public class KeyboardListener implements KeyListener {
                 rightPress = true;
                 break;
             }
-            case Settings.KEY_SPEED_UP: {
-                speedUpPress = true;
+            case Settings.KEY_SPEED_UP_2: {
+                speedUpPress2 = true;
                 break;
             }
             case Settings.KEY_LEFT_2: {
@@ -43,15 +53,16 @@ public class KeyboardListener implements KeyListener {
                 rightPress2 = true;
                 break;
             }
-            case Settings.KEY_SPEED_UP_2: {
-                speedUpPress2 = true;
-            }
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
         switch (e.getKeyCode()) {
+            case Settings.KEY_SPEED_UP: {
+                speedUpPress = false;
+                break;
+            }
             case Settings.KEY_LEFT: {
                 leftPress = false;
                 break;
@@ -60,8 +71,8 @@ public class KeyboardListener implements KeyListener {
                 rightPress = false;
                 break;
             }
-            case Settings.KEY_SPEED_UP: {
-                speedUpPress = false;
+            case Settings.KEY_SPEED_UP_2: {
+                speedUpPress2 = false;
                 break;
             }
             case Settings.KEY_LEFT_2: {
@@ -72,17 +83,31 @@ public class KeyboardListener implements KeyListener {
                 rightPress2 = false;
                 break;
             }
-            case Settings.KEY_SPEED_UP_2: {
-                speedUpPress2 = false;
-                break;
-            }
         }
     }
 
-    public boolean isLeftPress(){ return leftPress; }
-    public boolean isRightPress(){ return rightPress; }
-    public boolean isSpeedUpPress(){ return speedUpPress; }
-    public boolean isLeftPress2(){ return leftPress2; }
-    public boolean isRightPress2(){ return rightPress2; }
-    public boolean isSpeedUpPress2(){ return speedUpPress2; }
+    public boolean isSpeedUpPress2(){
+        return speedUpPress2;
+    }
+
+    public boolean isLeftPress2(){
+        return leftPress2;
+    }
+
+    public boolean isRightPress2(){
+        return rightPress2;
+    }
+
+    public boolean isSpeedUpPress(){
+        return speedUpPress;
+    }
+
+    public boolean isLeftPress() {
+        return leftPress;
+    }
+
+    public boolean isRightPress() {
+        return rightPress;
+    }
+
 }
