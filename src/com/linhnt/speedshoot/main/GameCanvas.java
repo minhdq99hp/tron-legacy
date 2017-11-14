@@ -39,8 +39,6 @@ public class GameCanvas extends JPanel{
 
         setupBackground();
 
-        setupPlayer();
-
         setupBonusManager();
     }
 
@@ -55,16 +53,14 @@ public class GameCanvas extends JPanel{
         GameObjectPool.createAndAdd(Background.class);
     }
 
-    private void setupPlayer() throws Exception {
+    public void setupPlayer() throws Exception {
+
         Player1 player_1 = GameObjectPool.createAndAddAnddAddToPhysics(Player1.class);
         player_1.setupKeyListener(this.keyboardListener);
-        player_1.setRenderer(new SingleImageRenderer(ImageUtils.read("assets/images/player1.png")));
-        player_1.getPosition().set(Settings.GAME_WIDTH / 2, 100);
+
 
         Player2 player_2 = GameObjectPool.createAndAddAnddAddToPhysics(Player2.class);
         player_2.setupKeyListener(this.keyboardListener);
-        player_2.setRenderer(new SingleImageRenderer(ImageUtils.read("assets/images/player2.png")));
-        player_2.getPosition().set(Settings.GAME_WIDTH / 2, 500);
     }
 
     void setupKeyListener(KeyboardListener e) {

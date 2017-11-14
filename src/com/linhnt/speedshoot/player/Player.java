@@ -20,7 +20,8 @@ public class Player extends GameObject {
     private float speed = Settings.NORMAL_SPEED;
 
     public Player(){
-
+        this.getScale().set(0.4f, 0.4f);
+        this.matchSpeedToVelocity();
     }
 
     public void setupKeyListener(KeyboardListener e){
@@ -30,6 +31,11 @@ public class Player extends GameObject {
     @Override
     public void run(long milisecDelay, GameObject parent) {
         super.run(milisecDelay, parent);
+
+    }
+
+    protected void matchSpeedToVelocity(){
+        this.getVelocity().multiplyThis(speed / this.getVelocity().getLength());
     }
 
     public int getBlood() {
@@ -70,5 +76,7 @@ public class Player extends GameObject {
 
     public void setSpeed(float speed) {
         this.speed = speed;
+
+        this.matchSpeedToVelocity();
     }
 }

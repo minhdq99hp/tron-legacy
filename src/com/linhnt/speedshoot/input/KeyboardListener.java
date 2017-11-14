@@ -20,6 +20,7 @@ public class KeyboardListener implements KeyListener {
     public static final KeyboardListener instance = new KeyboardListener();
 
     public KeyboardListener() {
+
     }
 
     @Override
