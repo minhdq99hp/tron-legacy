@@ -2,14 +2,12 @@ package com.linhnt.speedshoot.player;
 
 import com.linhnt.speedshoot.bases.GameObject;
 import com.linhnt.speedshoot.bases.animation.SingleImageRenderer;
-import com.linhnt.speedshoot.input.KeyboardListener;
 import com.linhnt.speedshoot.main.Settings;
 import com.linhnt.speedshoot.utils.ImageUtils;
 
 import java.io.IOException;
 
 public class Player1 extends Player {
-    private KeyboardListener keyboardListener;
 
     public Player1(){
         this.getVelocity().set(0, -1);

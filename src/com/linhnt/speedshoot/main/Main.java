@@ -30,10 +30,12 @@ public class Main {
                     }
                     case Settings.KEY_LEFT: {
                         player1.getVelocity().rotateThis(Settings.DELTA_ANGLE);
+//                        System.out.println("left");
                         break;
                     }
                     case Settings.KEY_RIGHT: {
                         player1.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
+//                        System.out.println("right");
                         break;
                     }
                     case Settings.KEY_SPEED_UP_2: {
@@ -42,10 +44,12 @@ public class Main {
                     }
                     case Settings.KEY_LEFT_2: {
                         player2.getVelocity().rotateThis(Settings.DELTA_ANGLE);
+//                        System.out.println("left2");
                         break;
                     }
                     case Settings.KEY_RIGHT_2: {
                         player2.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
+//                        System.out.println("right2");
                         break;
                     }
                 }

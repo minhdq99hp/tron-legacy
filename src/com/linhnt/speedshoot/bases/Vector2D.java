@@ -190,11 +190,43 @@ public class Vector2D {
     }
 
     public void rotateThis(float angleRadian){
-        angleRadian += Math.atan(y/x);
+        float angle = (float)((this.getAngle() + angleRadian) % (Math.PI * 2));
         float length = this.getLength();
-        this.set(length * (float)Math.cos(angleRadian), length * (float)Math.sin(angleRadian));
+
+        if(0 <= angle && angle <= Math.PI){
+            this.x = (float)(length * Math.cos(angle));
+            this.y = (float)(length * Math.sin(angle));
+        }
+        else if(Math.PI < angle && angle <= Math.PI * 2){
+            this.x = (float)(-length * Math.cos(angle));
+            this.y = (float)(-length * Math.sin(angle));
+        }
+
+        System.out.println(angle);
+    }
+    public float getAngle(){
+        float length = (float)Math.sqrt(x * x + y * y);
+
+        float angle = -1;
+        if(x >= 0 && y >= 0){ // goc phan tu thu nhat
+            angle = (float)Math.acos(x / length);
+        }
+        else if(x < 0 && y >= 0){ // goc phan tu thu hai
+            angle = (float)Math.acos(x / length);
+        }
+        else if(x < 0 && y < 0){ // goc phan tu thu ba
+            angle = (float)(Math.PI * 2 - Math.acos(x / length));
+        }
+        else if(x >= 0 && y < 0){ // goc phan tu thu tu
+            angle = (float)(Math.PI * 2 - Math.acos(x / length));
+        }
+
+        return angle;
     }
 
+    public float getDegreeAngle(){
+        return (float)(getAngle() * 180 / Math.PI);
+    }
     public Vector2D rotate(float angleRadian){
         Vector2D vector2D = this.clone();
         vector2D.rotateThis(angleRadian);
