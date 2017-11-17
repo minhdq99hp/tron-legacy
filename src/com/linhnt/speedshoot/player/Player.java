@@ -2,6 +2,7 @@ package com.linhnt.speedshoot.player;
 
 import com.linhnt.speedshoot.bases.GameObject;
 import com.linhnt.speedshoot.bases.animation.Animation;
+import com.linhnt.speedshoot.bases.pool.GameObjectPool;
 import com.linhnt.speedshoot.input.KeyboardListener;
 import com.linhnt.speedshoot.main.Settings;
 import com.linhnt.speedshoot.utils.ImageUtils;
@@ -19,15 +20,25 @@ public class Player extends GameObject {
 
     private float speed = Settings.NORMAL_SPEED;
 
+    private Tail tail;
+
     public Player(){
         this.getScale().set(0.4f, 0.4f);
         this.matchSpeedToVelocity();
+
+        setupTail();
     }
 
-    public void setupKeyListener(KeyboardListener e){
-        this.keyboardListener = e;
-    }
+    public void setupTail(){
+        try {
+            this.tail = GameObjectPool.createAndAdd(Tail.class);
+            this.tail.setPlayer(this);
+            this.tail.setupParticleDeque();
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public void run(long milisecDelay, GameObject parent) {
         super.run(milisecDelay, parent);

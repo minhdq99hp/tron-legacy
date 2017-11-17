@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0884573-d073-4f65-b036-98cddf879603" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/Vector2D.java" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/Vector2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Main.java" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Test.java" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player1.java" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player2.java" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Particle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Tail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java" afterPath="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,27 +17,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameCanvas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/GameCanvas.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="161">
+              <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding>
-                <element signature="method#renderToBackBuffer#0;class#GameCanvas#0" expanded="false" />
+                <element signature="e#1385#1386#0" expanded="true" />
+                <element signature="e#1413#1414#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vector2D.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/Vector2D.java">
+      <file leaf-file-name="Tail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Tail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="222" column="0" lean-forward="true" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding>
-                <element signature="e#5835#5836#0" expanded="true" />
-                <element signature="e#5893#5894#0" expanded="true" />
-                <element signature="method#rotate#0;class#Vector2D#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Particle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Particle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameCanvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/GameCanvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="69" column="77" lean-forward="true" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+              <folding>
+                <element signature="method#renderToBackBuffer#0;class#GameCanvas#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -54,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#725#726#0" expanded="true" />
@@ -70,35 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bonus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/Bonus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BonusManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/BonusManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/background/Background.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/Bonus.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/input/KeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Settings.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/BonusManager.java" />
@@ -151,6 +150,9 @@
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/Vector2D.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player2.java" />
         <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player1.java" />
+        <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Tail.java" />
+        <option value="$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Particle.java" />
       </list>
     </option>
   </component>
@@ -284,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -468,40 +470,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/Bonus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="method#renderToBackBuffer#0;class#GameCanvas#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/vehicule/Bus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -664,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="435" column="0" lean-forward="false" selection-start-line="435" selection-start-column="0" selection-end-line="435" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/JComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -743,7 +704,7 @@
         <state relative-caret-position="170">
           <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -753,34 +714,6 @@
         <state relative-caret-position="119">
           <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="method#renderToBackBuffer#0;class#GameCanvas#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/BonusManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -813,18 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/Vector2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="222" column="0" lean-forward="true" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="e#5835#5836#0" expanded="true" />
-            <element signature="e#5893#5894#0" expanded="true" />
-            <element signature="method#rotate#0;class#Vector2D#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -841,16 +762,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bonus/BonusManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#725#726#0" expanded="true" />
             <element signature="e#762#763#0" expanded="true" />
             <element signature="e#837#838#0" expanded="true" />
             <element signature="e#884#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="287" column="6" lean-forward="false" selection-start-line="287" selection-start-column="6" selection-end-line="287" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/bases/Vector2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="210" column="26" lean-forward="true" selection-start-line="210" selection-start-column="26" selection-end-line="210" selection-end-column="26" />
+          <folding>
+            <element signature="e#5835#5836#0" expanded="true" />
+            <element signature="e#5893#5894#0" expanded="true" />
+            <element signature="method#rotate#0;class#Vector2D#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="435" column="0" lean-forward="false" selection-start-line="435" selection-start-column="0" selection-end-line="435" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+          <folding>
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/ArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="235" column="22" lean-forward="true" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Tail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/main/GameCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="69" column="77" lean-forward="true" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+          <folding>
+            <element signature="method#renderToBackBuffer#0;class#GameCanvas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/linhnt/speedshoot/player/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
