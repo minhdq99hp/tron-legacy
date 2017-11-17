@@ -23,25 +23,13 @@ public class Player2 extends Player {
     }
 
     @Override
-    public void setupKeyListener(KeyboardListener e) {
-        this.keyboardListener = e;
+    public void setSpeed(float speed) {
+        super.setSpeed(speed);
     }
 
     @Override
     public void run(long milisecDelay, GameObject parent) {
         super.run(milisecDelay, parent);
 
-        if(keyboardListener.isLeftPress2()){
-            this.getVelocity().rotateThis(Settings.DELTA_ANGLE);
-        }
-        if(keyboardListener.isRightPress2()){
-            this.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
-        }
-        if(keyboardListener.isSpeedUpPress2()){
-            this.setSpeed(Settings.TURBO_SPEED);
-        }
-        else{
-            this.setSpeed(Settings.NORMAL_SPEED);
-        }
     }
 }

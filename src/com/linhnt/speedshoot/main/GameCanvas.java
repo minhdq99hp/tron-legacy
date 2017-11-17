@@ -22,6 +22,17 @@ public class GameCanvas extends JPanel{
     private BufferedImage cache;
     private Graphics2D cacheGraphics2D;
     private KeyboardListener keyboardListener;
+    private Player1 player1;
+    private Player2 player2;
+
+    public Player1 getPlayer1() {
+        return player1;
+    }
+
+    public Player2 getPlayer2() {
+        return player2;
+    }
+
 
 //    private Vector2D mouseClickPoint;
 
@@ -40,6 +51,8 @@ public class GameCanvas extends JPanel{
         setupBackground();
 
         setupBonusManager();
+
+        setupPlayer();
     }
 
     private void setupBonusManager() throws Exception {
@@ -54,13 +67,8 @@ public class GameCanvas extends JPanel{
     }
 
     public void setupPlayer() throws Exception {
-
-        Player1 player_1 = GameObjectPool.createAndAddAnddAddToPhysics(Player1.class);
-        player_1.setupKeyListener(this.keyboardListener);
-
-
-        Player2 player_2 = GameObjectPool.createAndAddAnddAddToPhysics(Player2.class);
-        player_2.setupKeyListener(this.keyboardListener);
+        player1 = GameObjectPool.createAndAddAnddAddToPhysics(Player1.class);
+        player2 = GameObjectPool.createAndAddAnddAddToPhysics(Player2.class);
     }
 
     void setupKeyListener(KeyboardListener e) {

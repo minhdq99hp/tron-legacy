@@ -1,15 +1,72 @@
 package com.linhnt.speedshoot.main;
 
+import com.linhnt.speedshoot.bases.GameObject;
 import com.linhnt.speedshoot.input.KeyboardListener;
+import com.linhnt.speedshoot.player.Player1;
+import com.linhnt.speedshoot.player.Player2;
 
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
  * Created by minhdq99hp on 11/11/2017.
  */
 public class Main {
-    private static KeyboardListener keyboardListener = KeyboardListener.instance;
+    private static void setupKeyboardListener(JFrame frame, Player1 player1, Player2 player2) throws Exception {
+        frame.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
 
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case Settings.KEY_SPEED_UP: {
+//                        speedUpPress = true;
+                        player1.setSpeed(Settings.TURBO_SPEED);
+                        break;
+                    }
+                    case Settings.KEY_LEFT: {
+                        player1.getVelocity().rotateThis(Settings.DELTA_ANGLE);
+                        break;
+                    }
+                    case Settings.KEY_RIGHT: {
+                        player1.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
+                        break;
+                    }
+                    case Settings.KEY_SPEED_UP_2: {
+                        player2.setSpeed(Settings.TURBO_SPEED);
+                        break;
+                    }
+                    case Settings.KEY_LEFT_2: {
+                        player2.getVelocity().rotateThis(Settings.DELTA_ANGLE);
+                        break;
+                    }
+                    case Settings.KEY_RIGHT_2: {
+                        player2.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case Settings.KEY_SPEED_UP: {
+//                        speedUpPress = true;
+                        player1.setSpeed(Settings.NORMAL_SPEED);
+                        break;
+                    }
+                    case Settings.KEY_SPEED_UP_2: {
+                        player2.setSpeed(Settings.NORMAL_SPEED);
+                        break;
+                    }
+                }
+            }
+        });
+    }
     public static void main(String[] args) {
 
         JFrame window = new JFrame();
@@ -20,12 +77,13 @@ public class Main {
         window.setResizable(false);
 
         try {
+
             GameCanvas canvas = new GameCanvas();
-            canvas.setupKeyListener(keyboardListener);
-            canvas.setupPlayer();
 
             window.add(canvas);
             window.setVisible(true);
+
+            setupKeyboardListener(window, canvas.getPlayer1(), canvas.getPlayer2());
 
             canvas.run();
         } catch (Exception e) {
