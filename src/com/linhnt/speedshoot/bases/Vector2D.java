@@ -189,21 +189,30 @@ public class Vector2D {
         return this.multiplyThis(length / this.getLength());
     }
 
-    public void rotateThis(float angleRadian){
-        float angle = (float)((this.getAngle() + angleRadian) % (Math.PI * 2));
-        float length = this.getLength();
+//    public void rotateThis(float angleRadian){
+//        float angle = (float)((this.getAngle() + angleRadian) % (Math.PI * 2));
+//        float length = this.getLength();
+//
+//        if(0 <= angle && angle <= Math.PI){
+//            this.x = (float)(length * Math.cos(angle));
+//            this.y = (float)(length * Math.sin(angle));
+//        }
+//        else if(Math.PI < angle && angle <= Math.PI * 2){
+//            this.x = (float)(-length * Math.cos(angle));
+//            this.y = (float)(-length * Math.sin(angle));
+//        }
+//
+//        System.out.println(angle);
+//    }
+    public void rotateThis(float angle)
+    {
+        float ca = (float)Math.cos(angle);
+        float sa = (float)Math.sin(angle);
 
-        if(0 <= angle && angle <= Math.PI){
-            this.x = (float)(length * Math.cos(angle));
-            this.y = (float)(length * Math.sin(angle));
-        }
-        else if(Math.PI < angle && angle <= Math.PI * 2){
-            this.x = (float)(-length * Math.cos(angle));
-            this.y = (float)(-length * Math.sin(angle));
-        }
-
-        System.out.println(angle);
+        this.x = ca * x - sa * y;
+        this.y = sa * x + ca * y;
     }
+
     public float getAngle(){
         float length = (float)Math.sqrt(x * x + y * y);
 
