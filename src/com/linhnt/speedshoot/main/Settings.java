@@ -19,7 +19,7 @@ public class Settings {
     public static final int INIT_POINT = 0;
     public static final float NORMAL_SPEED = 6;
     public static final float TURBO_SPEED = 12;
-    public static final float DELTA_ANGLE = (float)Math.PI / 12;
+    public static final float DELTA_ANGLE = (float)Math.PI / 24;
 
     // player_1
     public static final int KEY_LEFT = KeyEvent.VK_LEFT;

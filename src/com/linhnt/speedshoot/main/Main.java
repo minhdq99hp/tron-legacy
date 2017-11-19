@@ -1,7 +1,5 @@
 package com.linhnt.speedshoot.main;
 
-import com.linhnt.speedshoot.bases.GameObject;
-import com.linhnt.speedshoot.input.KeyboardListener;
 import com.linhnt.speedshoot.player.Player1;
 import com.linhnt.speedshoot.player.Player2;
 
@@ -24,32 +22,34 @@ public class Main {
             public void keyPressed(KeyEvent e) {
                 switch (e.getKeyCode()) {
                     case Settings.KEY_SPEED_UP: {
-//                        speedUpPress = true;
-                        player1.setSpeed(Settings.TURBO_SPEED);
+                        if(player1.getTail().length > 5) {
+                            player1.setSpeed(Settings.TURBO_SPEED);
+                            player1.getTail().length -= 0.1;
+                        }
                         break;
                     }
+
                     case Settings.KEY_LEFT: {
-                        player1.getVelocity().rotateThis(Settings.DELTA_ANGLE);
-//                        System.out.println("left");
+                        player1.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
                         break;
                     }
                     case Settings.KEY_RIGHT: {
-                        player1.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
-//                        System.out.println("right");
+                        player1.getVelocity().rotateThis(Settings.DELTA_ANGLE);
                         break;
                     }
                     case Settings.KEY_SPEED_UP_2: {
-                        player2.setSpeed(Settings.TURBO_SPEED);
+                        if(player2.getTail().length > 5){
+                            player2.setSpeed(Settings.TURBO_SPEED);
+                            player2.getTail().length -= 0.1;
+                        }
                         break;
                     }
                     case Settings.KEY_LEFT_2: {
                         player2.getVelocity().rotateThis(Settings.DELTA_ANGLE);
-//                        System.out.println("left2");
                         break;
                     }
                     case Settings.KEY_RIGHT_2: {
                         player2.getVelocity().rotateThis(-Settings.DELTA_ANGLE);
-//                        System.out.println("right2");
                         break;
                     }
                 }
@@ -59,7 +59,6 @@ public class Main {
             public void keyReleased(KeyEvent e) {
                 switch (e.getKeyCode()) {
                     case Settings.KEY_SPEED_UP: {
-//                        speedUpPress = true;
                         player1.setSpeed(Settings.NORMAL_SPEED);
                         break;
                     }
@@ -71,6 +70,7 @@ public class Main {
             }
         });
     }
+
     public static void main(String[] args) {
 
         JFrame window = new JFrame();
@@ -81,7 +81,6 @@ public class Main {
         window.setResizable(false);
 
         try {
-
             GameCanvas canvas = new GameCanvas();
 
             window.add(canvas);

@@ -209,8 +209,8 @@ public class Vector2D {
         float ca = (float)Math.cos(angle);
         float sa = (float)Math.sin(angle);
 
-        this.x = ca * x - sa * y;
-        this.y = sa * x + ca * y;
+        set(ca * x - sa * y, sa * x + ca * y);
+
     }
 
     public float getAngle(){

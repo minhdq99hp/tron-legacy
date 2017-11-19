@@ -34,17 +34,6 @@ public class GameCanvas extends JPanel{
     }
 
 
-//    private Vector2D mouseClickPoint;
-
-//    BullEyes bullEyes;
-//    private MouseAdapter mouseAdapter = new MouseAdapter() {
-//        @Override
-//        public void mouseClicked(MouseEvent e) {
-//            super.mouseClicked(e);
-//            mouseClickPoint.set(e.getX(), e.getY());
-//        }
-//    };
-
     GameCanvas()throws Exception{
         setupWindow();
 
@@ -66,13 +55,9 @@ public class GameCanvas extends JPanel{
         GameObjectPool.createAndAdd(Background.class);
     }
 
-    public void setupPlayer() throws Exception {
+    private void setupPlayer() throws Exception {
         player1 = GameObjectPool.createAndAddAnddAddToPhysics(Player1.class);
         player2 = GameObjectPool.createAndAddAnddAddToPhysics(Player2.class);
-    }
-
-    void setupKeyListener(KeyboardListener e) {
-        this.keyboardListener = e;
     }
 
     private void setupWindow() {
